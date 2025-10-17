@@ -3,7 +3,7 @@ name: Deploy React app to GitHub Pages
 on:
   push:
     branches:
-      - develop  # o 'master' si esa es tu rama principal
+      - main   # 👈 tu rama principal actual
 
 permissions:
   contents: write
@@ -32,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages  
+          publish_branch: gh-pages
